@@ -2,6 +2,8 @@ version: '2'
 services:
   portal:
     build: .
+    environment:
+      - LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_PASSWORD=my-secret-pw
     ports:
      - "8080:8080"
      - "11311:11311"
