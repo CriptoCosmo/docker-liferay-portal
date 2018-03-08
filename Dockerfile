@@ -1,8 +1,8 @@
-FROM mdelapenya/jdk:8-openjdk
+FROM mdelapenya/jdk:8-oraclejdk
 MAINTAINER Manuel de la Peña <manuel.delapenya@liferay.com>
 
 RUN apt-get update \
-  && apt-get install -y curl tree \
+  && apt-get install -y curl tree unzip wget \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
   && useradd -ms /bin/bash liferay
